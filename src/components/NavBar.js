@@ -1,22 +1,15 @@
 import React from 'react'
+import GifSearch from './GifSearch';
 
 function NavBar(props){
-  const colors = {
-    black: 'navbar-inverse',
-    white: 'navbar-default'
-  }
-  
-  return (
-    <nav className={`navbar ${colors[props.color]}`}>
-      <div className='container-fluid'>
-        <div className='navbar-header'>
-          <a className='navbar-brand'>
-            { props.title }
-          </a>
-        </div>
-      </div>
-    </nav>
-  )
+    return (
+        <nav className={`navbar navbar-expand-lg navbar-light bg-light`}>
+            <a className='navbar-brand mr-auto'>
+                { props.title }
+            </a>
+            < GifSearch onSearch={props.onSearch} />
+        </nav>
+    )
 }
 
 export default NavBar
