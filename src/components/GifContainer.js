@@ -25,8 +25,7 @@ class GifContainer extends React.Component {
     onSearch = (search) => {
         this.setState({
             search: search
-        })
-        this.getGifs()
+        }, () => this.getGifs())
     }
 
     componentDidMount() {
