@@ -6,7 +6,7 @@ import NavBar from './NavBar'
 class GifContainer extends React.Component {
     state = {
         gifs: [],
-        search: "happy"
+        search: "success"
     }
 
     getGifs = () => {
@@ -26,6 +26,7 @@ class GifContainer extends React.Component {
         this.setState({
             search: search
         })
+        this.getGifs()
     }
 
     componentDidMount() {
